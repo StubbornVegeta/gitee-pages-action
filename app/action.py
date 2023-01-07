@@ -124,7 +124,7 @@ class Action:
         if '/' not in self.repo:
             self.repo = f'{self.username}/{self.repo}'
 
-        pages_url = f'{domain}/{self.repo}/public/pages'
+        pages_url = f'{domain}/{self.repo}/public'
         rebuild_url = f'{pages_url}/rebuild'
 
         pages = self.session.get(pages_url)
