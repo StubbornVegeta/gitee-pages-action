@@ -2,7 +2,6 @@ from actions_toolkit import core
 
 from app import log
 from app.action import Action
-import os
 
 author = {
     'name': 'Yang Libin',
@@ -22,10 +21,7 @@ try:
     branch = core.get_input('branch')
     directory = core.get_input('directory')
     https = core.get_input('https')
-    os.environ['INPUT_GITEE-USERNAME'] = username
-    os.environ['INPUT_GITEE-PASSWORD'] = password
-    os.environ['INPUT_GITEE-REPO'] = repo
-    os.environ['INPUT_BRANCH'] = branch
+
     action = Action(username, password, repo, branch, directory, https)
 
     action.login()
